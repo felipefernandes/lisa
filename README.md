@@ -1,5 +1,9 @@
+<div align="center">
+<img src="https://github.com/felipefernandes/lisa/blob/main/lisa-avatar-480.jpg?raw=true">
+</div>
+
 # LiSA
-Um assistente virtual capaz de criar roteiros para retrospectivas e atividades usando [Estruturas Libertadoras](http://www.liberatingstructures.com.br/) em grupo a partir contextos variados usando IA.
+Um assistente virtual capaz de criar roteiros para retrospectivas e atividades usando [Estruturas Libertadoras](http://www.liberatingstructures.com.br/) em grupo a partir contextos variados usando IA. 
 
 ---
 obs: Esse projeto foi criado durante a Imersão IA da Alura + Google em 2024. 

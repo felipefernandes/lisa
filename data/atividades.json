@@ -1,0 +1,70 @@
+{
+    "abertura": {
+      "Fala 5 min": {
+        "descricao": "Cada pessoa compartilha algo que tem feito para se distrair.",
+        "formacao": "Individual",
+        "duracao": 5
+      },
+      "Check-in": {
+        "descricao": "Cada pessoa compartilha em uma palavra como está se sentindo.",
+        "formacao": "Individual",
+        "duracao": 5
+      },
+      "Desenho colaborativo": {
+        "descricao": "Em duplas, as pessoas se revezam completando um desenho.",
+        "formacao": "Duplas",
+        "duracao": 10
+      }
+    },
+    "reflexao": {
+      "1-2-4-All": {
+        "descricao": "Brainstorming em etapas: individual, duplas, quartetos, e por fim, todos juntos.",
+        "formacao": "Variada",
+        "duracao": 20
+      },
+      "Mad Sad Glad": {
+        "descricao": "As pessoas escrevem o que as deixou felizes, tristes e irritadas durante a sprint.",
+        "formacao": "Individual",
+        "duracao": 10
+      },
+      "Linha do Tempo": {
+        "descricao": "Criar uma linha do tempo de um período de trabalho (ou Sprint) e marcar os principais eventos.",
+        "formacao": "Grupo",
+        "duracao": 15
+      }
+    },
+    "decisao": {
+      "Dot Voting": {
+        "descricao": "Votar nos tópicos mais importantes para serem discutidos.",
+        "formacao": "Individual",
+        "duracao": 5
+      },
+      "5 Porquês": {
+        "descricao": "Investigar a causa raiz de um problema.",
+        "formacao": "Grupo",
+        "duracao": 15
+      },
+      "Plano de Ação": {
+        "descricao": "Definir ações concretas para resolver os problemas priorizados.",
+        "formacao": "Grupo",
+        "duracao": 20
+      }
+    },
+    "fechamento": {
+      "Check-out": {
+        "descricao": "Cada pessoa compartilha em uma palavra como se sente após a retrospectiva.",
+        "formacao": "Individual",
+        "duracao": 5
+      },
+      "Um Agradecimento": {
+        "descricao": "Cada pessoa agradece a outra por algo específico que contribuiu para a sprint.",
+        "formacao": "Individual",
+        "duracao": 10
+      },
+      "Próximos Passos": {
+        "descricao": "Revisar o plano de ação e garantir que todos estejam cientes dos próximos passos.",
+        "formacao": "Grupo",
+        "duracao": 5
+      }
+    }
+  }

@@ -35,7 +35,6 @@ Atualmente o projeto funciona experimentalmente apenas através do Google Collab
 * Aos instrutores que tiraram dúvidas e fizeram as aulas
 * Alura
 * Google
-* [Code Club Brasil](https://www.codeclubbrasil.org.br/)
 
 
 ---

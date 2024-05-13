@@ -7,8 +7,7 @@ import dados
 import pln
 import roteiro
 import google.generativeai as genai
-from google.colab import userdata
-from config import GOOGLEAI_KEY
+from config import GEMINIKEY
 
 # Carregamento de Dados
 estruturas = dados.carregar_dados("estruturas.json")
@@ -16,8 +15,7 @@ solucoes = dados.carregar_dados("solucoes.json")
 atividades = dados.carregar_dados("atividades.json")
 
 # Configuração do GenerativeAI
-GOOGLE_API_KEY = userdata.get('GEMINIKEY')
-genai.configure(api_key=GOOGLE_API_KEY)
+genai.configure(api_key=GEMINIKEY)
 
 # Inicializando o modelo de embeddings
 model = "models/embedding-001"
@@ -42,10 +40,14 @@ model_generative_config = {
 }
 
 model_generative_safety_settings = [
-    {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
-    {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
-    {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
-    {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
+    {"category": "HARM_CATEGORY_HARASSMENT",
+        "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
+    {"category": "HARM_CATEGORY_HATE_SPEECH",
+        "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
+    {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+        "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
+    {"category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+        "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
 ]
 
 system_instruction = "Seu nome é Lisa. Uma assistente virtual, com habilidades de um Coach profissional e experiente facilitadora de reuniões e atividades presenciais e online com amplo conhecimento de aplicação de Estruturas Libertadoras. Você irá se manter dentro do conhecimento relacionado.Você irá responder com base no idioma do usuário, fornecendo uma resposta consistente e coerente. Você não usará o termo 'sprint' para tornar suas respostas mais abrangentes a diferentes contextos, como times que utilizam metodologia Kanban, por exemplo. Sempre pergunte ao usuário se ele deseja mais alguma informação e o lembre que a palavra-chave para terminar a conversa é 'fim'"
@@ -59,22 +61,27 @@ chat = model_generative.start_chat(history=[
     {"role": "user", "parts": ["Se apresente."]},
 ])
 
+
 def update_chat_history(chat, role, message):
     """Adiciona uma nova entrada ao histórico da conversa."""
     chat.history.append({"role": role, "parts": [message]})
 
 # ---- Interação com o Usuário ----
 
+
 print(f"Olá eu sou Lisa!👋\n Uma assistente virtual especialista em criar roteiros para retrospectivas.")
 print()
 print("A seguir, você pode descrever o contexto da sua equipe/time, e em seguida me fazer perguntas sobre detalhes da execução de cada uma das atividades, ok?")
 print("-"*25)
 
-user_prompt = input("Descreva o contexto recente do time/equipe que deseja criar um roteiro: ")
-roteiro_gerado, resultado_busca = roteiro.gerar_roteiro(user_prompt, estruturas, atividades)
+user_prompt = input(
+    "Descreva o contexto recente do time/equipe que deseja criar um roteiro: ")
+roteiro_gerado, resultado_busca = roteiro.gerar_roteiro(
+    user_prompt, estruturas, atividades)
 roteiro.print_roteiro(roteiro_gerado)
 
-update_chat_history(chat, "user", f"Solicito a criação de um roteiro de retrospectiva para {user_prompt}")
+update_chat_history(
+    chat, "user", f"Solicito a criação de um roteiro de retrospectiva para {user_prompt}")
 update_chat_history(chat, "model", f"{roteiro_gerado}")
 
 print("-"*25)

@@ -1,70 +1,235 @@
 {
-    "abertura": {
-      "Fala 5 min": {
-        "descricao": "Cada pessoa compartilha algo que tem feito para se distrair.",
-        "formacao": "Individual",
-        "duracao": 5
-      },
-      "Check-in": {
-        "descricao": "Cada pessoa compartilha em uma palavra como está se sentindo.",
-        "formacao": "Individual",
-        "duracao": 5
-      },
-      "Desenho colaborativo": {
-        "descricao": "Em duplas, as pessoas se revezam completando um desenho.",
-        "formacao": "Duplas",
-        "duracao": 10
-      }
+  "abertura": {
+    "Mad Sad Glad": {
+      "descricao": "As pessoas escrevem o que as deixou felizes, tristes e irritadas durante um período de trabalho.",
+      "formacao": "Individual",
+      "duracao": 10
     },
-    "reflexao": {
-      "1-2-4-All": {
-        "descricao": "Brainstorming em etapas: individual, duplas, quartetos, e por fim, todos juntos.",
-        "formacao": "Variada",
-        "duracao": 20
-      },
-      "Mad Sad Glad": {
-        "descricao": "As pessoas escrevem o que as deixou felizes, tristes e irritadas durante a sprint.",
-        "formacao": "Individual",
-        "duracao": 10
-      },
-      "Linha do Tempo": {
-        "descricao": "Criar uma linha do tempo de um período de trabalho (ou Sprint) e marcar os principais eventos.",
-        "formacao": "Grupo",
-        "duracao": 15
-      }
+    "Ancoragem": {
+      "descricao": "O facilitador pede para os participantes pensarem em uma palavra que descreva o que aprenderam com o projeto/sprint.",
+      "formacao": "Individual",
+      "duracao": 5
     },
-    "decisao": {
-      "Dot Voting": {
-        "descricao": "Votar nos tópicos mais importantes para serem discutidos.",
-        "formacao": "Individual",
-        "duracao": 5
-      },
-      "5 Porquês": {
-        "descricao": "Investigar a causa raiz de um problema.",
-        "formacao": "Grupo",
-        "duracao": 15
-      },
-      "Plano de Ação": {
-        "descricao": "Definir ações concretas para resolver os problemas priorizados.",
-        "formacao": "Grupo",
-        "duracao": 20
-      }
+    "1 a 5": {
+      "descricao": "Os participantes dão uma nota de 1 a 5 para diversos aspectos do projeto.",
+      "formacao": "Individual",
+      "duracao": 5
     },
-    "fechamento": {
-      "Check-out": {
-        "descricao": "Cada pessoa compartilha em uma palavra como se sente após a retrospectiva.",
-        "formacao": "Individual",
-        "duracao": 5
-      },
-      "Um Agradecimento": {
-        "descricao": "Cada pessoa agradece a outra por algo específico que contribuiu para a sprint.",
-        "formacao": "Individual",
-        "duracao": 10
-      },
-      "Próximos Passos": {
-        "descricao": "Revisar o plano de ação e garantir que todos estejam cientes dos próximos passos.",
-        "formacao": "Grupo",
-        "duracao": 5
-      }
+    "Análise de Sentimentos": {
+      "descricao": "Os participantes expressam seus sentimentos sobre o projeto usando emojis ou cores.",
+      "formacao": "Individual",
+      "duracao": 5
+    },
+    "Temperature Check": {
+      "descricao": "Os participantes expressam seu nível de satisfação com o sprint usando uma escala de temperatura.",
+      "formacao": "Individual",
+      "duracao": 5
+    },
+    "Emoji Retrospective": {
+      "descricao": "Os participantes usam emojis para descrever seus sentimentos sobre o sprint.",
+      "formacao": "Individual",
+      "duracao": 5
+    },
+    "One Word": {
+      "descricao": "Cada participante descreve o sprint em uma única palavra.",
+      "formacao": "Individual",
+      "duracao": 5
+    }
+  },
+  "reflexao": {
+    "Linha do Tempo": {
+      "descricao": "Os participantes criam uma linha do tempo com os eventos mais importantes do sprint.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "Lições Aprendidas": {
+      "descricao": "Os participantes discutem as lições aprendidas durante o sprint.",
+      "formacao": "Grupo",
+      "duracao": 20
+    },
+    "O que deu certo?": {
+      "descricao": "Os participantes compartilham o que funcionou bem durante o sprint.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "O que podemos melhorar?": {
+      "descricao": "Os participantes discutem o que pode ser melhorado no próximo sprint.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "Quatro L's": {
+      "descricao": "Os participantes listam Liked (o que gostaram), Learned (o que aprenderam), Lacked (o que faltou) and Longed For (o que desejam).",
+      "formacao": "Individual",
+      "duracao": 15
+    },
+    "Gráfico de Pizza": {
+      "descricao": "Os participantes dividem um círculo em fatias que representam o tempo gasto em diferentes atividades.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "Diagrama de Ishikawa": {
+      "descricao": "Os participantes usam um diagrama de causa e efeito para identificar as causas de um problema.",
+      "formacao": "Grupo",
+      "duracao": 20
+    },
+    "Cinco Porquês": {
+      "descricao": "Os participantes perguntam \"por quê?\" cinco vezes para chegar à raiz de um problema.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "Roda da Retrospectiva": {
+      "descricao": "Os participantes respondem a perguntas em seis categorias: o que fizemos bem, o que podemos melhorar, o que devemos parar de fazer, o que devemos começar a fazer, o que devemos continuar fazendo e o que devemos fazer menos.",
+      "formacao": "Grupo",
+      "duracao": 20
+    },
+    "Lean Coffee": {
+      "descricao": "Os participantes escrevem tópicos em post-its e votam nos mais importantes para discussão.",
+      "formacao": "Grupo",
+      "duracao": 30
+    },
+    "Caixas de Sugestões": {
+      "descricao": "Os participantes escrevem sugestões anonimamente em cartões.",
+      "formacao": "Individual",
+      "duracao": 15
+    },
+    "Brainstorming": {
+      "descricao": "Os participantes geram ideias em grupo.",
+      "formacao": "Grupo",
+      "duracao": 20
+    },
+    "Matriz SWOT": {
+      "descricao": "Os participantes identificam as forças, fraquezas, oportunidades e ameaças do projeto.",
+      "formacao": "Grupo",
+      "duracao": 20
+    },
+    "História da Equipe": {
+      "descricao": "Os participantes escrevem uma história sobre a equipe durante o sprint.",
+      "formacao": "Grupo",
+      "duracao": 20
+    },
+    "Metáfora da Viagem": {
+      "descricao": "Os participantes usam metáforas de viagem para descrever o sprint.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "Desenho da Equipe": {
+      "descricao": "Os participantes desenham uma imagem que represente a equipe.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "Construção com Lego": {
+      "descricao": "Os participantes usam peças de Lego para construir algo que represente o sprint.",
+      "formacao": "Grupo",
+      "duracao": 20
+    },
+    "Os Presidentes Retrô": {
+      "descricao": "Definir um presidente para cada área que precisa ser analisada na retrospectiva (ex.: Comunicação, Código, etc). Cada presidente lidera a discussão sobre os problemas da sua área e as possíveis soluções.",
+      "formacao": "Grupo",
+      "duracao": 30
+    },
+    "Speedboat": {
+      "descricao": "Os participantes desenham um barco representando o projeto e identificam âncoras que o atrasam.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "Sailboat": {
+      "descricao": "Similar ao Speedboat, mas focando nos ventos que impulsionam o projeto.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "Happiness Histogram": {
+      "descricao": "Os participantes plotam seu nível de felicidade durante o sprint em um gráfico.",
+      "formacao": "Individual",
+      "duracao": 10
+    },
+    "Team Radar": {
+      "descricao": "Os participantes avaliam o desempenho da equipe em diversas áreas usando um gráfico de radar.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "What Went Well, What Didn't Go Well": {
+      "descricao": "Uma análise simples do que funcionou bem e o que não funcionou.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "Proud & Sorry": {
+      "descricao": "Os participantes compartilham o que os deixou orgulhosos e arrependidos durante o sprint.",
+      "formacao": "Individual",
+      "duracao": 10
+    },
+    "Three Little Pigs": {
+      "descricao": "Os participantes constroem casas de cartas que representam o projeto e discutem sua estabilidade.",
+      "formacao": "Grupo",
+      "duracao": 20
+    },
+    "Movie Critic": {
+      "descricao": "Os participantes avaliam o sprint como se fosse um filme.",
+      "formacao": "Individual",
+      "duracao": 10
+    },
+    "Timeline Retrospective": {
+      "descricao": "Os participantes criam uma linha do tempo visual do sprint, destacando eventos importantes e seus sentimentos.",
+      "formacao": "Grupo",
+      "duracao": 20
+    },
+    "Hot Air Balloon": {
+      "descricao": "Os participantes identificam elementos que impulsionam o projeto para cima (balão) e elementos que o puxam para baixo (sacos de areia).",
+      "formacao": "Grupo",
+      "duracao": 15
+    }
+  },
+  "decisao": {
+    "Start, Stop, Continue": {
+      "descricao": "Os participantes identificam ações para começar, parar e continuar.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "Diagrama de Afinidades": {
+      "descricao": "Os participantes agrupam ideias semelhantes em categorias.",
+      "formacao": "Grupo",
+      "duracao": 20
+    },
+    "Pesquisa de Satisfação": {
+      "descricao": "Os participantes respondem a um questionário sobre sua satisfação com o projeto.",
+      "formacao": "Individual",
+      "duracao": 10
+    },
+    "Starfish": {
+      "descricao": "Os participantes identificam ações para parar, começar, fazer menos, fazer mais e continuar fazendo.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "Stop, Start, Keep": {
+      "descricao": "Versão simplificada do Start, Stop, Continue.",
+      "formacao": "Grupo",
+      "duracao": 10
+    }
+  },
+  "fechamento": {
+    "Círculo de Feedback": {
+      "descricao": "Os participantes dão feedback uns aos outros em um círculo.",
+      "formacao": "Grupo",
+      "duracao": 30
+    },
+    "Jogo de Cartas": {
+      "descricao": "Os participantes usam cartas com perguntas ou instruções para facilitar a discussão.",
+      "formacao": "Grupo",
+      "duracao": 15
+    },
+    "Simulação": {
+      "descricao": "Os participantes simulam uma situação real para identificar problemas e soluções.",
+      "formacao": "Grupo",
+      "duracao": 30
+    },
+    "Teatro de Improviso": {
+      "descricao": "Os participantes encenam situações relacionadas ao projeto.",
+      "formacao": "Grupo",
+      "duracao": 20
+    },
+    "Appreciations": {
+      "descricao": "Os participantes expressam gratidão uns aos outros.",
+      "formacao": "Grupo",
+      "duracao": 10
     }
   }
+}

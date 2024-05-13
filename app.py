@@ -1,13 +1,12 @@
-# !pip install -q -U google-generativeai
-
+import streamlit as st
 import google.generativeai as genai
 import textwrap
 from IPython.display import display
 from IPython.display import Markdown
+from config import GEMINIKEY
 
 # Configuracao do GenerativeAI
-GOOGLE_API_KEY = "AIzaSyAzO3FR7an1eCQi_0eXuSUO9Yx2YH2cqtc"
-genai.configure(api_key=GOOGLE_API_KEY)
+genai.configure(api_key=GEMINIKEY)
 
 # Setup do modelo + segurança
 generation_config = {

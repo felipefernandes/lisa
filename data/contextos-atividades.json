@@ -1,0 +1,101 @@
+{
+    "motivos": {
+        "Comunicação": {
+            "descrição": "Problemas relacionados à clareza, eficácia e frequência da comunicação na equipe.",
+            "atividades": [
+                "Mad Sad Glad",
+                "Linha do Tempo",
+                "Lições Aprendidas",
+                "O que deu certo?",
+                "O que podemos melhorar?",
+                "Roda da Retrospectiva",
+                "Lean Coffee",
+                "Caixas de Sugestões",
+                "Brainstorming",
+                "Círculo de Feedback"
+            ]
+        },
+        "Planejamento": {
+            "descrição": "Deficiências na definição do escopo, estimativas, priorização e organização das tarefas do projeto.",
+            "atividades": [
+                "1 a 5",
+                "Linha do Tempo",
+                "Quatro L's",
+                "Gráfico de Pizza",
+                "Diagrama de Ishikawa",
+                "Cinco Porquês",
+                "Roda da Retrospectiva",
+                "Lean Coffee",
+                "Start, Stop, Continue",
+                "Matriz SWOT",
+                "Speedboat"
+            ]
+        },
+        "Execução": {
+            "descrição": "Obstáculos e dificuldades encontradas durante a realização das tarefas do sprint.",
+            "atividades": [
+                "Linha do Tempo",
+                "Lições Aprendidas",
+                "O que deu certo?",
+                "O que podemos melhorar?",
+                "Quatro L's",
+                "Diagrama de Ishikawa",
+                "Cinco Porquês",
+                "Roda da Retrospectiva",
+                "Lean Coffee",
+                "Start, Stop, Continue",
+                "Diagrama de Afinidades",
+                "Sailboat",
+                "Starfish"
+            ]
+        },
+        "Cultura da Equipe": {
+            "descrição": "Questões relacionadas à dinâmica interpessoal, colaboração, engajamento e apoio entre os membros da equipe.",
+            "atividades": [
+                "Mad Sad Glad",
+                "Ancoragem",
+                "Lições Aprendidas",
+                "O que podemos melhorar?",
+                "Roda da Retrospectiva",
+                "Lean Coffee",
+                "Caixas de Sugestões",
+                "Brainstorming",
+                "História da Equipe",
+                "Metáfora da Viagem",
+                "Desenho da Equipe",
+                "Construção com Lego",
+                "Círculo de Feedback",
+                "Appreciations"
+            ]
+        },
+        "Aprendizado e Melhoria": {
+            "descrição": "Dificuldades em assimilar as lições aprendidas durante o sprint e implementá-las para melhorar o processo.",
+            "atividades": [
+                "Ancoragem",
+                "Lições Aprendidas",
+                "O que podemos melhorar?",
+                "Quatro L's",
+                "Roda da Retrospectiva",
+                "Lean Coffee",
+                "Start, Stop, Continue",
+                "Matriz SWOT",
+                "Pesquisa de Satisfação",
+                "One Word",
+                "Timeline Retrospective"
+            ]
+        },
+        "Sobrecarga e Estresse": {
+            "descrição": "Excesso de trabalho, pressão por resultados e falta de tempo para descanso, levando à exaustão da equipe.",
+            "atividades": [
+                "Os Presidentes Retrô",
+                "Mad Sad Glad",
+                "Gráfico de Pizza",
+                "Pesquisa de Satisfação",
+                "Análise de Sentimentos",
+                "Happiness Histogram",
+                "Temperature Check",
+                "Emoji Retrospective"
+            ]
+        }
+    }
+}

@@ -10,9 +10,9 @@ import google.generativeai as genai
 from config import GEMINIKEY
 
 # Carregamento de Dados
-estruturas = dados.carregar_dados("estruturas.json")
-solucoes = dados.carregar_dados("solucoes.json")
-atividades = dados.carregar_dados("atividades.json")
+# estruturas = dados.carregar_dados("estruturas.json")
+# solucoes = dados.carregar_dados("solucoes.json")
+# atividades = dados.carregar_dados("atividades.json")
 
 # Configuração do GenerativeAI
 genai.configure(api_key=GEMINIKEY)

@@ -86,11 +86,20 @@
                 onkeydown="if(event.key === 'Enter'){this.form.submit(); return false;}">
         </form>
     </div>
-    {% if user_input %}
-    <div class="output">
-        <p>*Você digitou:* {{ user_input }}</p>
-    </div>
-    {% endif %}
+
+    {% if roteiro %}
+    <h2>Sugestões de Estruturas Libertadoras:</h2>
+    <p>{{ resultado_busca }}</p>
+
+    <h2>Roteiro Gerado:</h2>
+    {% for secao, (atividade, detalhes) in roteiro.items() %}
+    <h3>{{ secao }}</h3>
+    <p><strong>Duração:</strong> {{ detalhes['duracao'] }} min</p>
+    <p><strong>Formação:</strong> {{ detalhes['formacao'] }}</p>
+    <p><strong>Atividade:</strong> {{ atividade }}</p>
+    <p>{{ detalhes['descricao'] }}</p>
+    {% endfor %}
+    {% else %}
     <div class="tips">
         <h4>Dicas:</h4>
         <ul>
@@ -99,6 +108,8 @@
             <li>Fale sobre a duração esperada de timebox.</li>
         </ul>
     </div>
+    {% endif %}
+
 </body>
 
 </html>

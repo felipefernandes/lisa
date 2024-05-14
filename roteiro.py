@@ -13,16 +13,21 @@ def encontrar_estrutura_adequada(estruturas_dict, label_alvo):
 def gerar_roteiro(prompt, estruturas, atividades):
     """Gera um roteiro de retrospectiva."""
     # Usar a função busca para obter sugestões de ELs
-    resultado_busca = pln.busca(prompt)
-    estruturas_recomendadas_nomes = resultado_busca.split(
-        "Estruturas recomendadas: ")[1].strip().split(", ")
+    resultado_busca = pln.busca(prompt, pln.df_estruturas)
+    if "Estruturas recomendadas:" in resultado_busca:
+        estruturas_recomendadas_nomes = resultado_busca.split(
+            "Estruturas recomendadas: ")[1].strip().split(", ")
+    else:
+        estruturas_recomendadas_nomes = [resultado_busca.split(
+            "Estrutura recomendada: ")[1].strip()]
 
     # Encontrar as ELs na lista de estruturas usando os nomes recomendados
     estruturas_recomendadas = [
         estrutura for estrutura in estruturas if estrutura["nome"] in estruturas_recomendadas_nomes]
 
     # Converter a lista de estruturas para dicionário
-    estruturas_dict = {estrutura["nome"]                       : estrutura for estrutura in estruturas}
+    estruturas_dict = {estrutura["nome"]
+        : estrutura for estrutura in estruturas}
 
     # Encontrar as ELs adequadas para cada seção
     reflexao_estrutura = encontrar_estrutura_adequada(

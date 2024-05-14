@@ -51,7 +51,21 @@ def gerar_e_buscar_consulta(consulta, base, model, limite_relevancia=0.6):
     embedding_da_consulta = genai.embed_content(
         model=model, content=consulta, task_type="RETRIEVAL_QUERY")["embedding"]
     produtos_escalares = np.dot(
-        np.stack(base['LabelEmbeddings']), embedding_da_consulta)
+        np.stack(base['Embeddings']), embedding_da_consulta)
     indices_relevantes = np.where(produtos_escalares >= limite_relevancia)[0]
     resultados_relevantes = base.iloc[indices_relevantes]['nome'].tolist()
-    return resultados_relevantes[:3] if resultados_relevantes else [base.iloc[np.argmax(produtos_escalares)]['nome']]
+    if resultados_relevantes:
+        return f"Estruturas recomendadas: {', '.join(resultados_relevantes[:3])}"
+    else:
+        return f"Estrutura recomendada: {base.iloc[np.argmax(produtos_escalares)]['nome']}"
+
+
+df_estruturas = None
+
+
+def busca(prompt, df_estruturas):
+    """
+    Função principal para realizar a busca de estruturas libertadoras relevantes 
+    com base no prompt do usuário.
+    """
+    return gerar_e_buscar_consulta(prompt, df_estruturas, model)

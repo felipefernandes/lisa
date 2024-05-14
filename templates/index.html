@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .input-container {
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-family: inherit;
+            width: 100%;
+            border: 0;
+            border-bottom: 2px solid #9b9b9b;
+            outline: 0;
+            font-size: 1.3rem;
+            color: #525252;
+            padding: 7px 0;
+            background: transparent;
+            transition: border-color 0.2s;
+            text-align: center;
+        }
+
+        input[type="text"]::placeholder {
+            color: #525252;
+        }
+
+        input[type="text"]:placeholder-shown {
+            font-size: 1.3rem;
+            cursor: text;
+            top: 20px;
+        }
+
+        input[type="text"]:focus {
+            display: block;
+            transition: 0.2s;
+            color: #3f526d;
+        }
+
+        .output {
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .tips {
+            margin-top: 40px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Olá, eu sou Lisa</h1>
+    <img src="{{ url_for('static', filename='lisa-avatar-320.jpg') }}" alt="Imagem Centralizada e Arredondada">
+    <div class="input-container">
+        <form method="POST" id="inputForm">
+            <input type="text" name="user_input" placeholder="Me conta, sobre o que vai ser a Retrospectiva hoje?"
+                onkeydown="if(event.key === 'Enter'){this.form.submit(); return false;}">
+        </form>
+    </div>
+    {% if user_input %}
+    <div class="output">
+        <p>*Você digitou:* {{ user_input }}</p>
+    </div>
+    {% endif %}
+    <div class="tips">
+        <h4>Dicas:</h4>
+        <ul>
+            <li>Diga o nome do time onde será feita a Retrospectiva.</li>
+            <li>Conte para Lisa o tipo de problema que o time está enfrentando.</li>
+            <li>Fale sobre a duração esperada de timebox.</li>
+        </ul>
+    </div>
+</body>
+
+</html>

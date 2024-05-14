@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/felipefernandes/lisa/blob/main/lisa-avatar-480.jpg?raw=true">
+<img src="https://github.com/felipefernandes/lisa/blob/main/static/lisa-avatar-320.jpg?raw=true">
 </div>
 
 # LiSA
@@ -19,6 +19,7 @@ Para Scrum Masters, Agile Masters, Game Producers e Gerentes de Projetos por vez
 * Google AI Studio - Para treinamento inicial do modelo
 * Google Collab - Para criação do código e acesso a API do modelo Generativo Gemini
 * Python - Para criação dos códigos de acesso a API 
+* Flask - Para UI
 
 ## ⚙️ Funcionamento
 

@@ -11,13 +11,19 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 80vh;
             margin: 0;
+            margin-top: 40px;
+            margin-bottom: 80px;
             font-family: 'Poppins', sans-serif;
         }
 
         h1 {
             text-align: center;
+            margin-bottom: 0;
+        }
+
+        .intro {
+            margin-bottom: 20px;
         }
 
         img {
@@ -74,32 +80,67 @@
             margin-top: 40px;
 
         }
+
+        .roteiro-gerado {
+            margin-top: 20px;
+        }
+
+        .roteiro-gerado h2 {
+            color: #3f526d;
+            padding-bottom: 20px;
+        }
+
+        .secao .detalhes {
+            margin-top: 0;
+            line-height: 21px;
+        }
+
+        .secao h3 {
+            margin-bottom: 5px;
+        }
+
+        .secao strong {
+            color: #5c5c5c;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Olá, eu sou Lisa</h1>
-    <img src="{{ url_for('static', filename='lisa-avatar-320.jpg') }}" alt="Imagem Centralizada e Arredondada">
+    <div class="intro">
+        <h1>Olá, eu sou Lisa</h1>
+        <small>Uma assistente virtual na criação de roteiros para retrospectivas.</small>
+    </div>
+
+    <img src="{{ url_for('static', filename='lisa-avatar-320.jpg') }}" alt="Lisa">
+
+
+    {% if roteiro %}
+    <div class="roteiro-gerado">
+        <h2>Ok, aqui está minha sugestão de roteiro:</h2>
+        {% for secao, (atividade, detalhes) in roteiro.items() %}
+        <div class="secao">
+            <h3>{{ secao }}</h3>
+            <p class="detalhes">
+                <strong>Duração:</strong> {{ detalhes['duracao'] }}<br>
+                <strong>Formação:</strong> {{ detalhes['formacao'] }}<br>
+                <strong>Atividade:</strong> {{ atividade }}<br>
+                <strong>Como funciona?</strong> {{ detalhes['descricao'] }}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
     <div class="input-container">
         <form method="POST" id="inputForm">
             <input type="text" name="user_input" placeholder="Me conta, sobre o que vai ser a Retrospectiva hoje?"
                 onkeydown="if(event.key === 'Enter'){this.form.submit(); return false;}">
         </form>
     </div>
-
-    {% if roteiro %}
-    <h2>Sugestões de Estruturas Libertadoras:</h2>
-    <p>{{ resultado_busca }}</p>
-
-    <h2>Roteiro Gerado:</h2>
-    {% for secao, (atividade, detalhes) in roteiro.items() %}
-    <h3>{{ secao }}</h3>
-    <p><strong>Duração:</strong> {{ detalhes['duracao'] }} min</p>
-    <p><strong>Formação:</strong> {{ detalhes['formacao'] }}</p>
-    <p><strong>Atividade:</strong> {{ atividade }}</p>
-    <p>{{ detalhes['descricao'] }}</p>
-    {% endfor %}
-    {% else %}
     <div class="tips">
         <h4>Dicas:</h4>
         <ul>
@@ -109,6 +150,16 @@
         </ul>
     </div>
     {% endif %}
+
+    <footer>
+        <hr>
+        <small>
+            Desenvolvido com ❤️ por <a href="https://www.linkedin.com/in/felipefernand10/" target="_blank">Felipe
+                Fernandes</a> 😊<br>
+            Gostou? Tem alguma idéia e quer contribuir com esse projeto? <a
+                href="https://github.com/felipefernandes/lisa" target="_blank">Github</a>.
+        </small>
+    </footer>
 
 </body>
 

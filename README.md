@@ -5,7 +5,7 @@
 # LiSA AI
 É uma assistente virtual capaz de criar roteiros para retrospectivas e atividades a partir contextos variados usando IA. 
 
-## (Experimente aqui)[https://lisa-ai-w3l2l.ondigitalocean.app/]
+### [https://lisa-ai-w3l2l.ondigitalocean.app/](https://lisa-ai-w3l2l.ondigitalocean.app/)
 
 ---
 obs: Esse projeto foi criado durante a **Imersão IA da Alura + Google** em 2024. 

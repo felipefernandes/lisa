@@ -16,3 +16,13 @@ def carregar_dados(nome_arquivo):
     except json.JSONDecodeError:
         print(f"Erro: Formato inválido de JSON em '{caminho_completo}'.")
         return None
+
+
+def criacao_dataframe_solucoes(solucoes):
+    try:
+        solucoes = dados.carregar_dados("solucoes.json")
+        df_solucoes = pln.criar_dataframe(solucoes)
+        df_solucoes = pln.adicionar_embeddings(df_solucoes, "solucao")
+    except Exception as e:
+        print(
+            f"Erro ao criar ou adicionar embeddings ao DataFrame de soluções: {str(e)}")

@@ -2,7 +2,6 @@ import pln
 import dados
 import roteiro
 from flask import Flask, render_template, request
-print('Flask importado com sucesso!')
 
 
 app = Flask(__name__)

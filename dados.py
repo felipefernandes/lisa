@@ -1,5 +1,6 @@
 import json
 import os
+import pln
 
 
 def carregar_dados(nome_arquivo):
@@ -20,7 +21,7 @@ def carregar_dados(nome_arquivo):
 
 def criacao_dataframe_solucoes(solucoes):
     try:
-        solucoes = dados.carregar_dados("solucoes.json")
+        solucoes = carregar_dados("solucoes.json")
         df_solucoes = pln.criar_dataframe(solucoes)
         df_solucoes = pln.adicionar_embeddings(df_solucoes, "solucao")
     except Exception as e:

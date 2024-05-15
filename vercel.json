@@ -3,12 +3,7 @@
     "builds": [
         {
             "src": "app.py",
-            "use": "@vercel/python",
-            "config": {
-                "maxLambdaSize": "80mb",
-                "runtime": "python3.9",
-                "pip_install_cmd": "pip install -r requirements.txt"
-            }
+            "use": "@vercel/python"
         }
     ],
     "routes": [

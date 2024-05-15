@@ -68,4 +68,7 @@ def busca(prompt, df_estruturas):
     Função principal para realizar a busca de estruturas libertadoras relevantes 
     com base no prompt do usuário.
     """
+    # Inicializando o modelo de embeddings (movido para cá para ser global)
+    model = "models/embedding-001"
+
     return gerar_e_buscar_consulta(prompt, df_estruturas, model)

@@ -2,11 +2,13 @@
 <img src="https://github.com/felipefernandes/lisa/blob/main/static/lisa-avatar-320.jpg?raw=true">
 </div>
 
-# LiSA
-Um assistente virtual capaz de criar roteiros para retrospectivas e atividades usando [Estruturas Libertadoras](http://www.liberatingstructures.com.br/) em grupo a partir contextos variados usando IA. 
+# LiSA AI
+É uma assistente virtual capaz de criar roteiros para retrospectivas e atividades a partir contextos variados usando IA. 
+
+### [https://lisa-ai-w3l2l.ondigitalocean.app/](https://lisa-ai-w3l2l.ondigitalocean.app/)
 
 ---
-obs: Esse projeto foi criado durante a Imersão IA da Alura + Google em 2024. 
+obs: Esse projeto foi criado durante a **Imersão IA da Alura + Google** em 2024. 
 
 ---
 ## 🚀 Motivação
@@ -39,6 +41,11 @@ Atualmente o projeto funciona experimentalmente apenas através do Google Collab
 
 
 ---
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=cdce318c1077&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+
+---
 ⌨️ com ❤️ por *Felipe Fernandes* 😊
+
 
 

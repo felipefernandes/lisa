@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" type="text/javascript"></script>
+</head>
+
+<body>
+    <h1>Olá, eu sou Lisa</h1>
+    <img src="{{ url_for('static', filename='img/lisa-avatar-320.jpg') }}" alt="Imagem Centralizada e Arredondada">
+
+    {% if roteiro %}
+    <div class="roteiro-gerado">
+        <h2>Ok, aqui está minha sugestão de roteiro:</h2>
+        {% for secao, (atividade, detalhes) in roteiro.items() %}
+        <div class="secao">
+            <h3>{{ secao }}</h3>
+            <p class="detalhes">
+                <strong>Duração:</strong> {{ detalhes['duracao'] }}<br>
+                <strong>Formação:</strong> {{ detalhes['formacao'] }}<br>
+                <strong>Atividade:</strong> {{ atividade }}<br>
+                <strong>Como funciona?</strong> {{ detalhes['descricao'] }}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="input-container">
+        <form method="POST" id="inputForm">
+            <input type="text" name="user_input" placeholder="Me conta, sobre o que vai ser a Retrospectiva hoje?"
+                onkeydown="if(event.key === 'Enter'){this.form.submit(); return false;}">
+        </form>
+    </div>
+    <div class="tips">
+        <h4>Dicas:</h4>
+        <ul>
+            <li>Diga o nome do time onde será feita a Retrospectiva.</li>
+            <li>Conte para Lisa o tipo de problema que o time está enfrentando.</li>
+            <li>Fale sobre a duração esperada de timebox.</li>
+        </ul>
+    </div>
+    {% endif %}
+
+    <footer>
+        <hr>
+        <small>
+            Desenvolvido com ❤️ por <a href="https://www.linkedin.com/in/felipefernand10/" target="_blank">Felipe
+                Fernandes</a> 😊<br>
+            Gostou? Tem alguma idéia e quer contribuir com esse projeto? <a
+                href="https://github.com/felipefernandes/lisa" target="_blank">Github</a>.
+        </small>
+    </footer>
+
+
+
+</body>
+
+</html>

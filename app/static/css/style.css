@@ -1,22 +1,30 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 80vh;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 h1 {
     text-align: center;
 }
 
-img {
+body>img {
     border-radius: 50%;
     width: 240px;
     height: 240px;
     object-fit: cover;
+    margin-bottom: 20px;
 }
 
 .input-container {
@@ -64,5 +72,47 @@ input[type="text"]:focus {
 
 .tips {
     margin-top: 40px;
+}
 
+.roteiro-gerado {
+    width: 100%;
+    max-width: 600px;
+}
+
+.reiniciar {
+    padding-top: 30px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top: 1px dashed #999;
+}
+
+.botao-reiniciar {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-reiniciar:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    width: 50%;
+    text-align: center;
+    margin-top: auto;
+    padding-bottom: 30px;
+}
+
+footer>hr {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #999;
 }

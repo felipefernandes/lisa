@@ -30,6 +30,20 @@
         <div class="reiniciar">
             <a href="{{ url_for('home') }}" class="botao-reiniciar">Novo roteiro</a>
         </div>
+        <div class="avaliar">
+            <h3>Avalie o roteiro</h3>
+            <form method="POST" action="{{ url_for('avaliar') }}">
+                <input type="hidden" name="roteiro_id" value="{{ roteiro_id }}">
+                <label for="avaliacao">Gostou do roteiro?</label>
+                <select name="avaliacao" id="avaliacao">
+                    <option value="gostei">Gostei</option>
+                    <option value="nao gostei">Não Gostei</option>
+                </select>
+                <label for="comentario">Comentário (opcional):</label>
+                <textarea name="comentario" id="comentario" rows="4" cols="50"></textarea>
+                <button type="submit">Enviar Avaliação</button>
+            </form>
+        </div>
     </div>
     {% else %}
     <div class="input-container">

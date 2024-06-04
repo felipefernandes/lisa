@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lisa</title>
+    <title>Lyssa - Eu te ajudo a criar roteiros de retrospectivas personalizados</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <script src="{{ url_for('static', filename='js/scripts.js') }}" type="text/javascript"></script>
 </head>
 
 <body>
-    <h1>Olá, eu sou Lisa</h1>
+    <h1>Olá, eu sou Lyssa</h1>
     <img src="{{ url_for('static', filename='img/lisa-avatar-320.jpg') }}" alt="Imagem Centralizada e Arredondada">
 
     {% if roteiro %}
@@ -48,17 +48,21 @@
     {% else %}
     <div class="input-container">
         <form method="POST" id="inputForm">
-            <input type="text" name="user_input" placeholder="Me conta, sobre o que vai ser a Retrospectiva hoje?"
+            <label for="user_input">Me conta, escreva sobre o seu contexto, <br>e vou te ajudar com sua Retrospectiva de
+                hoje.</label>
+            <input type="text" name="user_input" placeholder=""
                 onkeydown="if(event.key === 'Enter'){this.form.submit(); return false;}">
         </form>
     </div>
-    <div class="tips">
-        <h4>Dicas:</h4>
-        <ul>
-            <li>Diga o nome do time onde será feita a Retrospectiva.</li>
-            <li>Conte para Lisa o tipo de problema que o time está enfrentando.</li>
-            <li>Fale sobre a duração esperada de timebox.</li>
-        </ul>
+    <div class="tips-container">
+        <div class="tips">
+            <h4>Quer umas dicas?</h4>
+            <ul>
+                <li>Me conte o nome da sua equipe, e onde será feita a Retrospectiva (remota ou presencial).</li>
+                <li>Conte sobre o desafio ou problema que a equipe está enfrentando.</li>
+                <li>E também sobre a duração esperada para Retrospectiva (timebox).</li>
+            </ul>
+        </div>
     </div>
     {% endif %}
 
